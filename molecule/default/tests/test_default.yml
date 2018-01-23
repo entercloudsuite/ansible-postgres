@@ -1,0 +1,24 @@
+---
+package:
+  postgresql:
+    installed: true
+port:
+  tcp:5432:
+    listening: true
+    ip:
+    - 127.0.0.1
+service:
+  postgresql:
+    enabled: true
+    running: true
+user:
+  postgres:
+    exists: true
+    groups:
+    - postgres
+group:
+  postgres:
+    exists: true
+process:
+  postgres:
+    running: true
